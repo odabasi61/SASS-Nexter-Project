@@ -56,12 +56,15 @@
   &__rooms,
   &__area,
   &__price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
     svg {
       fill: $color-primary;
       height: 2rem;
       width: 2rem;
-    }
-    p {
     }
   }
 
