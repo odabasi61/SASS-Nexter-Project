@@ -1,33 +1,43 @@
 .features {
-  grid-column: center-start / center-end;
+    grid-column: center-start / center-end;
 
-  margin: 15rem 0;
+    margin: 15rem 0;
 
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(25rem, 1fr)
-  ); // with this code, this section of the page is automatically made responsive. when the page is reduced, the column number is decreasing and rows are increasing.
-  grid-gap: 6rem;
-  align-items: start;
+    @supports(display: grid) {
+        display: grid;
+        //grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-gap: 6rem;
+        align-items: start;
+    }
 }
 
+
 .feature {
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-row-gap: 1.5rem;
-  grid-column-gap: 2.5rem;
 
-  &__icon {
-    fill: $color-primary;
-    width: 4.5rem;
-    height: 4.5rem;
-    grid-row: 1 / span 2; // here we could put -1 instead of span 2 but it wouldn't work because the rows are not implicit
-    transform: translateY(-1rem);
-  }
+    float: left;
+    width: 33.3333%;
+    margin-bottom: 6rem;
 
-  &__text {
-    font-size: 1.7rem;
-  }
+    @supports(display: grid) {
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
+    &__icon {
+        fill: $color-primary;
+        width: 4.5rem;
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
+    }
+
+    &__text {
+        font-size: 1.7rem;
+    }
 }
