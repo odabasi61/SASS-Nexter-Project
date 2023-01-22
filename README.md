@@ -1,6 +1,6 @@
 # Nexter-Project
 
-This is a beautifully designed house dealer website
+This is a beautifully designed house dealer website. In this sample project, i used advance level css techniques and grid layouts for page responsivity. Also scss is used in this project.
 
 https://odabasi61.github.io/Nexter-Project/
 
